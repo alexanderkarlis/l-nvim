@@ -82,6 +82,10 @@ return require("packer").startup(
         use {"glepnir/galaxyline.nvim", opt = true}
         use {"romgrk/barbar.nvim", opt = true}
 
+        -- Nvim surround
+        use {"blackCauldron7/surround.nvim"}
+
+        require_plugin("surround.nvim")
         require_plugin("nvim-lspconfig")
         require_plugin("lspsaga.nvim")
         require_plugin("nvim-lspinstall")

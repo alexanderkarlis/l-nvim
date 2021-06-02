@@ -64,6 +64,12 @@ O = {
 		diagnostics = {virtualtext = {spacing = 0, prefix = ""}, signs = true, underline = true},
 		filetypes = {'rb', 'erb', 'rakefile'}
 	},
+	go = {
+        formatter = 'gofmt',
+        autoformat = false,
+		filetypes = {'*.go'},
+		diagnostics = {virtualtext = {spacing = 0, prefix = ""}, signs = true, underline = true},
+	},
     -- css = {formatter = '', autoformat = false, virtual_text = true},
     -- json = {formatter = '', autoformat = false, virtual_text = true}
 

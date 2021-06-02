@@ -60,3 +60,13 @@ vim.cmd('inoremap <expr> <c-k> (\"\\<C-p>\")')
 -- map <leader>n <Plug>(miniyank-cycle)
 -- map <leader>N <Plug>(miniyank-cycleback)
 -- ]])
+
+-- Commands from original vimrc
+vim.api.nvim_set_keymap('n', ';', ':', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<Leader>y', '"*y$', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<Leader>p', '"*p$', {noremap = true, silent = true})
+vim.cmd('noremap <Leader>p "*p')
+-- vim.cmd(':nmap ; :')
+vim.cmd('inoremap <C-e> <C-o>$')
+vim.cmd('inoremap <C-a> <C-o>0')
+

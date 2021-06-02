@@ -23,6 +23,7 @@ command! ResetHunk lua require 'lv-utils'.reset_hunk()
 command! ResetBuffer lua require 'lv-utils'.reset_buffer()
 command! PreviewHunk lua require 'lv-utils'.preview_hunk()
 command! BlameLine lua require 'lv-utils'.blame_line()
+command! FormatJson lua require 'lv-utils'.format_json()
 command! W noa w
 
 " Debugging
@@ -63,3 +64,6 @@ autocmd User GoyoLeave set laststatus=2
 
 " autocmd! User GoyoEnter lua require('galaxyline').disable_galaxyline()
 " autocmd! User GoyoLeave lua require('galaxyline').galaxyline_augroup()
+
+autocmd BufWritePre *.go lua vim.lsp.buf.formatting_sync()
+

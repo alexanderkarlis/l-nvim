@@ -25,6 +25,10 @@ if O.json.autoformat then table.insert(auto_formatters, json_format) end
 local ruby_format = {'BufWritePre', '*.rb', 'lua vim.lsp.buf.formatting_sync(nil,1000)'}
 if O.ruby.autoformat then table.insert(auto_formatters, ruby_format) end
 
+local golang_autoformat = {'BufWritePre', '*.go', 'gofmt'}
+-- local golang_autoformat = {'BufWritePre', '*.go', 'lua vim.lsp.buf.formatting_sync(nil, 1000)'}
+if O.go.autoformat then table.insert(auto_formatters, golang_autoformat) end
+
 utils.define_augroups({
     _general_settings = {
         {'TextYankPost', '*', 'lua require(\'vim.highlight\').on_yank({higroup = \'Search\', timeout = 200})'},

@@ -186,5 +186,18 @@ function nv_utils.file_exists(name)
     end
 end
 
+function nv_utils.format_json()
+    os.execute("jq --version")
+    local jq_exec = io.popen("jq --version", "r")
+    local result = jq_exec:read("*a")
+    print(result)
+    jq_exec:close()
+    -- TODO: add python script when jq is not found
+    if jq_exec then
+        print("jq not found")
+        return
+    end
+end
+
 return nv_utils
 
