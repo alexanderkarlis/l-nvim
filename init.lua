@@ -18,6 +18,13 @@ require('lv-treesitter')
 require('lv-autopairs')
 require('lv-rnvimr')
 require('lv-which-key')
+-- require('lv-surround')
+vim.cmd([[
+    call plug#begin('~/.vim/plugged')
+    " Plugins
+    Plug 'tpope/vim-surround'
+    call plug#end()
+]])
 
 -- TODO is there a way to do this without vimscript
 vim.cmd('source ~/.config/nvim/vimscript/functions.vim')

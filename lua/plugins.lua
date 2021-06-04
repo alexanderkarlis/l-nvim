@@ -6,6 +6,7 @@ local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
     execute("!git clone https://github.com/wbthomason/packer.nvim " .. install_path)
     execute "packadd packer.nvim"
+    "fello"
 end
 
 --- Check if a file or directory exists in this path
@@ -83,9 +84,19 @@ return require("packer").startup(
         use {"romgrk/barbar.nvim", opt = true}
 
         -- Nvim surround
-        use {"blackCauldron7/surround.nvim"}
+        -- use {
+        --   "tpope/vim-surround",
+        -- }
 
-        require_plugin("surround.nvim")
+        -- Markdown preview
+--         use {
+--             'iamcco/markdown-preview.nvim',
+--             run = function() vim.fn['mkdp#util#install']() end,
+--             ft = {'markdown'}
+--         }
+-- 
+--         require_plugin("iamcco/markdown-preview.nvim")
+        require_plugin("vim-surround")
         require_plugin("nvim-lspconfig")
         require_plugin("lspsaga.nvim")
         require_plugin("nvim-lspinstall")
