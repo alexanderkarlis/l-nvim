@@ -15,11 +15,15 @@ require'lspconfig'.sumneko_lua.setup {
             },
             diagnostics = {
                 -- Get the language server to recognize the `vim` global
-                globals = {'vim'}
+                globals = {'vim', 'hs'}
             },
             workspace = {
                 -- Make the server aware of Neovim runtime files
-                library = {[vim.fn.expand('$VIMRUNTIME/lua')] = true, [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true},
+                library = {
+                    [vim.fn.expand("/Applications/Hammerspoon.app/Contents/Resources/extensions/hs/?/init.lua")] = true,
+                    [vim.fn.expand('$VIMRUNTIME/lua')] = true,
+                    [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true,
+                },
                 maxPreload = 10000
             }
         }

@@ -66,4 +66,9 @@ autocmd User GoyoLeave set laststatus=2
 " autocmd! User GoyoLeave lua require('galaxyline').galaxyline_augroup()
 
 autocmd BufWritePre *.go lua vim.lsp.buf.formatting_sync()
+let g:terraform_fmt_on_save = 1
+" autocmd BufWritePre *.tf :TerraformFmt
 
+augroup filetypedetect
+    autocmd BufRead,BufNewFile Jenkinsfile* set filetype=groovy
+augroup END

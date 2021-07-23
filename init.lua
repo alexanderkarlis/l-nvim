@@ -23,6 +23,8 @@ vim.cmd([[
     call plug#begin('~/.vim/plugged')
     " Plugins
     Plug 'tpope/vim-surround'
+    Plug 'hashivim/vim-terraform'
+    Plug 'juliosueiras/vim-terraform-completion'
     call plug#end()
 ]])
 

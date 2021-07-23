@@ -26,6 +26,7 @@ local ruby_format = {'BufWritePre', '*.rb', 'lua vim.lsp.buf.formatting_sync(nil
 if O.ruby.autoformat then table.insert(auto_formatters, ruby_format) end
 
 local golang_autoformat = {'BufWritePre', '*.go', 'gofmt'}
+local terraform_autoformat = {'BufWritePre', '*.tf', ':LspFormatting'}
 -- local golang_autoformat = {'BufWritePre', '*.go', 'lua vim.lsp.buf.formatting_sync(nil, 1000)'}
 if O.go.autoformat then table.insert(auto_formatters, golang_autoformat) end
 
